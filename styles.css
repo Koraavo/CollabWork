@@ -175,27 +175,29 @@ html {
 /* menu */
 /* need to slide it down instead of letting it come directly */
 .mobile-show {
-    /* display: block; */
+    opacity: 1;
     max-height: 75rem;
-    overflow: hidden;
     display: block;
     transition: all 1s ease-out;
-    
 }
 
 .mobile-hide {    
     /* display: none; */
+    opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 1s ease-out;
     display: block;
 }
 
+.login-show {
+    opacity: 1;
+}
+
+.login-hide {
+    opacity: 0;
+}
+
 .menu-btn {
     display: none;
 }
-
-
-.header.max-height {
-    height: 100vh;
-} 

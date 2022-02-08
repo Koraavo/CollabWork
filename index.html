@@ -18,18 +18,18 @@
   <script>
     $(function(){
         $(".menu-btn").on("click", function() {
-            if($(".menu").hasClass("mobile-hide") && $(".login-button").hasClass("mobile-show")){
+            if($(".menu").hasClass("mobile-hide") && $(".login-button").hasClass("login-show")){
                 $(".menu").removeClass("mobile-hide");
                 $(".menu").addClass("mobile-show").slideDown();
-                $(".login-button").removeClass("mobile-show");
-                $(".login-button").addClass("mobile-hide");
+                $(".login-button").removeClass("login-show");
+                $(".login-button").addClass("login-hide");
             }
 
             else {
                 $(".menu").addClass("mobile-hide");
                 $(".menu").removeClass("mobile-show");
-                $(".login-button").addClass("mobile-show");
-                $(".login-button").removeClass("mobile-hide");
+                $(".login-button").addClass("login-show");
+                $(".login-button").removeClass("login-hide");
             }
         })
     });
@@ -54,7 +54,7 @@
           </label>
       </div>
 
-      <div class="login-button mobile-show"><a href="LOGIN">LOGIN</a></div>
+      <div class="login-button login-show"><a href="LOGIN">LOGIN</a></div>
 
       <ul class="menu mobile-hide">
           <li class="item"><a href="#">What is Shadow</a></li>
