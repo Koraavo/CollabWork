@@ -5,28 +5,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collaboration</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <script>
+    $(function(){
+        $(".menu-btn").on("click", function() {
+            if($(".menu").hasClass("mobile-hide") && $(".login-button").hasClass("mobile-show")){
+                $(".menu").removeClass("mobile-hide");
+                $(".menu").addClass("mobile-show").slideDown();
+                $(".login-button").removeClass("mobile-show");
+                $(".login-button").addClass("mobile-hide");
+            }
+
+            else {
+                $(".menu").addClass("mobile-hide");
+                $(".menu").removeClass("mobile-show");
+                $(".login-button").addClass("mobile-show");
+                $(".login-button").removeClass("mobile-hide");
+            }
+        })
+    });
+</script>
+
+
 </head>
 <body>
+  
   <header class="header">
-    <a href="/" class="logo">SHADOW</a>
-    <!-- this will help with the hamburger -->
-    <input type="checkbox" id="menu-btn" class="menu-btn">
-    <!-- this will become the hamburger -->
-    <label for="menu-btn" class="menu-icon">
-        <span class="nav-icon"></span>
-    </label>
-    <nav>
-    <ul class="menu">
-        <li><a href="#">What is Shadow</a></li>
-        <li><a href="#">Tech Specs</a></li>
-        <li><a href="#">Requirements</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Cancel Subscription</a></li>
-    </ul>
+    <nav class="nav-container">
+      <div class="logodiv">
+        <i class="fas fa-baseball-ball"></i>
+        <a href="#" class="logo">SHADOW</a>
+      </div>
+
+      <div class="hamburger">
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+          <!-- this will become the hamburger -->
+          <label for="menu-btn" class="menu-icon">
+              <span class="bars"></span>
+          </label>
+      </div>
+
+      <div class="login-button mobile-show"><a href="LOGIN">LOGIN</a></div>
+
+      <ul class="menu mobile-hide">
+          <li class="item"><a href="#">What is Shadow</a></li>
+          <li class="item"><a href="#">Tech Specs</a></li>
+          <li class="item"><a href="#">Requirements</a></li>
+          <li class="item"><a href="#">Support</a></li>
+          <li class="item button"><a href="#">Login</a></li>
+          <li class="item button secondary"><a href="#">Subscribe</a></li>
+      </ul>
   </nav>
 </header>
+
+
     <main>
       <section>
         <img src="./img/lenovo-model1.png" alt="lenovo-cpu">

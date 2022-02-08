@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #222;
+    color: white;
+    font-family: "Oswald", sans-serif;
+}
+
+.header {
+    background-color: #111;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    padding: 3rem 2rem;
+}
+
+.fas {
+    font-family: FontAwesome;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.logodiv {
+    font-size: 3rem;
+}
+
+.login-button a,
+.menu li a {
+    font-size: 1.5rem;
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logodiv a {
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+
+/* navbars */
+
+.bars,
+.bars::before,
+.bars::after   {
+    background-color: #fff;
+    display: inline-block;
+    height: .3rem;
+    width: 3rem;
+    position: relative;
+    
+}
+
+.bars::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    transition: all .3s ease-out;
+}
+
+.bars::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    transition: all .3s ease-out;
+}
+
+.menu-btn:checked ~ .menu-icon .bars{
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .bars::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.login-button a,
+.logo {
+    color: white;
+}
+
+/* Finally starting with positioning things */
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    align-content: center;
+    margin: 0 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.logodiv {
+    display: flex;
+    order: 1;
+    grid-column: 1/2
+}
+
+.menu {
+    order: 2;
+    grid-column: 2/6;
+    /* margin: 10rem auto; */
+    padding: 10rem;
+    height: 100vh;
+}
+
+.menu li {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.login-button {
+    order: 3;
+    grid-column: 7;
+    font-size: 1.5rem;
+    position: relative;
+    top: .5rem;
+}
+
+.hamburger {
+    order: 4;
+    grid-column: 8;
+    position: relative;
+    top: .5rem;
+}
+
+
+/* menu */
+.mobile-show {
+    display: block;
+}
+
+.mobile-hide {
+    overflow: hidden;
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+
