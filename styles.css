@@ -201,3 +201,35 @@ html {
 .menu-btn {
     display: none;
 }
+
+/* the main page */
+
+section {
+    width: 100%;
+    height: 200vh;
+}
+
+
+.lenovo-single {
+    position: sticky;
+    top: 70%;
+    left: 25%;
+
+}
+
+.amd {
+    transform: scale(50%);
+    position: sticky;
+    top: 35%;
+    left: 25%;
+    opacity: 100;
+    transition: opacity 3s ease-out;
+}
+
+.speakers {
+    transform: scale(60%);
+    position: sticky;
+    top: 35%;
+    left: 50%;
+    transition: opacity 3s ease-out;
+}
